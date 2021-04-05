@@ -148,7 +148,7 @@ std::string DateTime::toString(TimeFormat format, TimeExtension ext)
         sprintf(buff, ":%03d", mImplPtr->m_milisec);
         break;
     case TimeExtension::MICRO_SEC:
-        sprintf(buff, ":%03ld", mImplPtr->m_microsec);
+        sprintf(buff, ":%06ld", mImplPtr->m_microsec);
         break;
     default:
         buff[0] = '\0'; //for empty string

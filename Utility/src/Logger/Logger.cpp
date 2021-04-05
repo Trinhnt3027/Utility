@@ -58,7 +58,7 @@ private:
     std::mutex m_mutex;
 
 private:
-    const uint16_t m_MaxFileSize = 5120;    // 5MB * 1024
+    const uint64_t m_MaxFileSize = uint64_t(5242880);    // 5MB * 1024
     const u_int8_t m_maxFileCount = 5;
 };
 
@@ -168,7 +168,7 @@ void Logger::LoggerImlp::initLogFile()
         fs::create_directory(m_fsPath);
     }
 
-    std::string m_logFilePrefix = m_appName;
+    m_logFilePrefix = m_appName;
     fs::path logFilePath = m_fsPath / (m_logFilePrefix + "1.log");
     if (fs::exists(logFilePath) == false) {
         m_fsPath = logFilePath;
