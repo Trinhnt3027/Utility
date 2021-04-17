@@ -23,6 +23,6 @@ target_include_directories(${PROJECT_NAME}  PUBLIC ${Boost_INCLUDE_DIRS})
 target_link_libraries(${PROJECT_NAME} /usr/lib/libboost_filesystem.so)
 
 ################################################################
-install(TARGETS ${PROJECT_NAME} DESTINATION lib)
+install(TARGETS ${PROJECT_NAME})
 
-install(DIRECTORY include/ DESTINATION include/${PROJECT_NAME} )
+install(DIRECTORY include/ DESTINATION include/${PROJECT_NAME})

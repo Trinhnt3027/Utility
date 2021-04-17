@@ -2,7 +2,7 @@
 
 #include <string>
 #include <memory>
-#include "Logger/StreamLogger.h"
+#include "StreamLogger.h"
 #include <list>
 
 namespace Utility {
